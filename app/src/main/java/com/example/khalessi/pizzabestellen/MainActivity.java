@@ -13,25 +13,25 @@ import android.widget.TextView;
 
 import static com.example.khalessi.pizzabestellen.R.id.ausgabe;
 
-public class MainActivity extends AppCompatActivity implements OnItemSelectedListener{
+public class MainActivity extends AppCompatActivity implements OnItemSelectedListener {
 
-    private final String TAG ="Bestellung";
+    private final String TAG = "Bestellung";
     private String meinText;
     private TextView ausgabeText;
 
     private Spinner teigAuswahl;
-    private String  [] teig;
+    private String[] teig;
     private Spinner belaegeAuswahl;
-    private String  [] belaege;
+    private String[] belaege;
     private Spinner wurstAuswahl;
-    private String  [] wurst;
+    private String[] wurst;
     private Spinner kaeseAuswahl;
-    private String  [] kaese;
+    private String[] kaese;
     private Spinner belaegeAuswahlzwei;
-    private String  [] belaegeZwei;
+    private String[] belaegeZwei;
     Button button;
 
-   @Override
+    @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putString("meinText", meinText);
@@ -64,17 +64,17 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
         //Zugriff auf das Array
         kaese = getResources().getStringArray(R.array.kaese);
 
-        if(savedInstanceState !=null){
-           // meinText = savedInstanceState.getString(kaese.getText().toString());
+        if (savedInstanceState != null) {
+            // meinText = savedInstanceState.getString(kaese.getText().toString());
         }
 
     }
 
-    public void onSpeichernClick(View v){
-     //   nameText = (EditText) findViewById(R.id.eingabe);
-     //   meinText = nameText.getText().toString()+" ";
+    public void onSpeichernClick(View v) {
+        //   nameText = (EditText) findViewById(R.id.eingabe);
+        //   meinText = nameText.getText().toString()+" ";
 
-
+        Log.d("Alexandra", "onspeicher geclicked");
 
     }
 
@@ -86,11 +86,11 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
         String belaegeTag = belaege[position];
         String wurstTag = wurst[position];
         String kaeseTag = kaese[position];
-        Log.d(TAG, "Bestellung = "+belaegeTag+wurstTag+kaeseTag);
+        Log.d(TAG, "Bestellung = " + belaegeTag + wurstTag + kaeseTag);
         ausgabeText = (TextView) findViewById(ausgabe);
-         // meinText = ausgabe.getText().toString()+" ";
-        String bestellung="";
-        bestellung="Ihre Bestellung: "+teigTag+", "+belaegeTag+", "+wurstTag+", "+kaeseTag;
+        // meinText = ausgabe.getText().toString()+" ";
+        String bestellung = "";
+        bestellung = "Ihre Bestellung: " + teigTag + ", " + belaegeTag + ", " + wurstTag + ", " + kaeseTag;
 
         ausgabeText.setText(bestellung);
 
