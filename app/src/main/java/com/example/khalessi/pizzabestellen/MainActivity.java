@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
     private Spinner belaegeAuswahlzwei;
     private String[] belaegeZwei;
     Button button;
+    public String bestellung, kaeseTag, teigTag, wurstTag, belaegeTag;
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
@@ -70,11 +71,13 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
 
     }
 
-    public void onSpeichernClick(View v) {
-        //   nameText = (EditText) findViewById(R.id.eingabe);
-        //   meinText = nameText.getText().toString()+" ";
+    public void onSpeichernClick(View v){
+        ausgabeText = (TextView) findViewById(ausgabe);
+        bestellung="Ihre Bestellung: "+teigTag+", "+belaegeTag+", "+wurstTag+", "+kaeseTag;
 
-        Log.d("Alexandra", "onspeicher geclicked");
+        ausgabeText.setText(bestellung);
+
+
 
     }
 
@@ -89,10 +92,10 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
         Log.d(TAG, "Bestellung = " + belaegeTag + wurstTag + kaeseTag);
         ausgabeText = (TextView) findViewById(ausgabe);
         // meinText = ausgabe.getText().toString()+" ";
-        String bestellung = "";
+    /*    String bestellung = "";
         bestellung = "Ihre Bestellung: " + teigTag + ", " + belaegeTag + ", " + wurstTag + ", " + kaeseTag;
 
-        ausgabeText.setText(bestellung);
+        ausgabeText.setText(bestellung);*/
 
 
     }
