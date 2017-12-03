@@ -71,12 +71,11 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
 
     }
 
-    public void onSpeichernClick(View v){
+    public void onSpeichernClick(View v) {
         ausgabeText = (TextView) findViewById(ausgabe);
-        bestellung="Ihre Bestellung: "+teigTag+", "+belaegeTag+", "+wurstTag+", "+kaeseTag;
+        bestellung = "Ihre Bestellung: " + teigTag + ", " + belaegeTag + ", " + wurstTag + ", " + kaeseTag;
 
         ausgabeText.setText(bestellung);
-
 
 
     }
