@@ -85,10 +85,10 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         //String tag = teig.getSelectedItem().toString();
 
-        String teigTag = teig[position];
-        String belaegeTag = belaege[position];
-        String wurstTag = wurst[position];
-        String kaeseTag = kaese[position];
+        teigTag = teig[position];
+        belaegeTag = belaege[position];
+        wurstTag = wurst[position];
+        kaeseTag = kaese[position];
         Log.d(TAG, "Bestellung = " + belaegeTag + wurstTag + kaeseTag);
         ausgabeText = (TextView) findViewById(ausgabe);
         // meinText = ausgabe.getText().toString()+" ";
