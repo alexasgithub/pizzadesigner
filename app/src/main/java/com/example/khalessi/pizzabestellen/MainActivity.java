@@ -1,5 +1,7 @@
 package com.example.khalessi.pizzabestellen;
 
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -59,6 +61,9 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view,
                                        int position, long l) {
                 bestellung.setTeig(teig[position]);
+                ((TextView) adapterView.getChildAt(0)).setTextColor(Color.WHITE);
+                ((TextView) adapterView.getChildAt(0)).setTypeface(null, Typeface.BOLD_ITALIC);
+
             }
 
             @Override
@@ -75,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView,
                                        View view, int position, long l) {
                 bestellung.setBelag1(belaege[position]);
+                ((TextView) adapterView.getChildAt(0)).setTextColor(Color.WHITE);
+                ((TextView) adapterView.getChildAt(0)).setTypeface(null, Typeface.BOLD_ITALIC);
             }
 
             @Override
@@ -95,6 +102,8 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView,
                                        View view, int position, long l) {
                 bestellung.setBelag2(belaege[position]);
+                ((TextView) adapterView.getChildAt(0)).setTextColor(Color.WHITE);
+                ((TextView) adapterView.getChildAt(0)).setTypeface(null, Typeface.BOLD_ITALIC);
             }
 
             @Override
@@ -113,6 +122,10 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView,
                                        View view, int position, long l) {
                 bestellung.setBelag3(belaege[position]);
+                ((TextView) adapterView.getChildAt(0)).setTextColor(Color.WHITE);
+                ((TextView) adapterView.getChildAt(0)).setTypeface(null, Typeface.BOLD_ITALIC);
+
+
             }
 
             @Override
@@ -131,6 +144,8 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view,
                                        int position, long l) {
                 bestellung.setWurst(wurst[position]);
+                ((TextView) adapterView.getChildAt(0)).setTextColor(Color.WHITE);
+                ((TextView) adapterView.getChildAt(0)).setTypeface(null, Typeface.BOLD_ITALIC);
             }
 
             @Override
@@ -148,6 +163,8 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView,
                                        View view, int position, long l) {
                 bestellung.setKaese(kaese[position]);
+                ((TextView) adapterView.getChildAt(0)).setTextColor(Color.WHITE);
+                ((TextView) adapterView.getChildAt(0)).setTypeface(null, Typeface.BOLD_ITALIC);
             }
 
             @Override
