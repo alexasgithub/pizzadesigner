@@ -17,6 +17,7 @@ import java.util.Arrays;
 
 import static com.example.khalessi.pizzabestellen.R.id.ausgabe;
 import static com.example.khalessi.pizzabestellen.R.id.beginning;
+import static com.example.khalessi.pizzabestellen.R.id.chains;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -61,8 +62,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view,
                                        int position, long l) {
                 bestellung.setTeig(teig[position]);
-                ((TextView) adapterView.getChildAt(0)).setTextColor(Color.WHITE);
-                ((TextView) adapterView.getChildAt(0)).setTypeface(null, Typeface.BOLD_ITALIC);
+                setItemStyle(adapterView);
 
             }
 
@@ -80,8 +80,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView,
                                        View view, int position, long l) {
                 bestellung.setBelag1(belaege[position]);
-                ((TextView) adapterView.getChildAt(0)).setTextColor(Color.WHITE);
-                ((TextView) adapterView.getChildAt(0)).setTypeface(null, Typeface.BOLD_ITALIC);
+                setItemStyle(adapterView);
             }
 
             @Override
@@ -102,8 +101,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView,
                                        View view, int position, long l) {
                 bestellung.setBelag2(belaege[position]);
-                ((TextView) adapterView.getChildAt(0)).setTextColor(Color.WHITE);
-                ((TextView) adapterView.getChildAt(0)).setTypeface(null, Typeface.BOLD_ITALIC);
+                setItemStyle(adapterView);
             }
 
             @Override
@@ -122,8 +120,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView,
                                        View view, int position, long l) {
                 bestellung.setBelag3(belaege[position]);
-                ((TextView) adapterView.getChildAt(0)).setTextColor(Color.WHITE);
-                ((TextView) adapterView.getChildAt(0)).setTypeface(null, Typeface.BOLD_ITALIC);
+                setItemStyle(adapterView);
 
 
             }
@@ -144,8 +141,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view,
                                        int position, long l) {
                 bestellung.setWurst(wurst[position]);
-                ((TextView) adapterView.getChildAt(0)).setTextColor(Color.WHITE);
-                ((TextView) adapterView.getChildAt(0)).setTypeface(null, Typeface.BOLD_ITALIC);
+                setItemStyle(adapterView);
             }
 
             @Override
@@ -163,8 +159,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView,
                                        View view, int position, long l) {
                 bestellung.setKaese(kaese[position]);
-                ((TextView) adapterView.getChildAt(0)).setTextColor(Color.WHITE);
-                ((TextView) adapterView.getChildAt(0)).setTypeface(null, Typeface.BOLD_ITALIC);
+                setItemStyle(adapterView);
             }
 
             @Override
@@ -179,6 +174,16 @@ public class MainActivity extends AppCompatActivity {
             // meinText = savedInstanceState.getString(kaese.getText().toString());
         }
 
+    }
+
+    private void setItemStyle(AdapterView<?> adapterView) {
+        if (adapterView != null) {
+            TextView childAt = (TextView) adapterView.getChildAt(0);
+            if (childAt != null) {
+                childAt.setTextColor(Color.WHITE);
+                childAt.setTypeface(null, Typeface.BOLD_ITALIC);
+            }
+        }
     }
 
     public void onSpeichernClick(View v) {
