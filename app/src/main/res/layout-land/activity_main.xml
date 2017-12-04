@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -67,6 +68,7 @@
                     android:id="@+id/belaege"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:color="@color/white"
                     android:entries="@array/belaege" />
 
 
@@ -88,6 +90,7 @@
                     android:id="@+id/belaegeZwei"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:color="@color/white"
                     android:entries="@array/belaege" />
 
 
@@ -110,6 +113,7 @@
                     android:id="@+id/belaegeDrei"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:color="@color/white"
                     android:entries="@array/belaege" />
 
 
@@ -133,6 +137,7 @@
                     android:id="@+id/wurst"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:color="@color/white"
                     android:entries="@array/wurst" />
 
             </TableRow>
@@ -154,6 +159,7 @@
                     android:id="@+id/kaese"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:color="@color/white"
                     android:entries="@array/kaese" />
 
 
@@ -164,7 +170,7 @@
 
         <Button
             android:id="@+id/button"
-            android:layout_width="match_parent"
+            android:layout_width="400sp"
             android:layout_height="wrap_content"
             android:layout_margin="20sp"
             android:onClick="onSpeichernClick"
@@ -174,12 +180,14 @@
 
         <TextView
             android:id="@+id/ausgabe"
-            android:layout_width="match_parent"
-            android:textColor="@color/white"
+            android:layout_width="400sp"
             android:layout_height="wrap_content"
             android:layout_margin="20sp"
+            android:textColor="@color/white"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:capitalize="characters"
+            tools:elevation="15dp" />
 
 
     </LinearLayout>
