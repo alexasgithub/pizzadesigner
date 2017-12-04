@@ -8,6 +8,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/background"
         android:orientation="vertical"
         tools:context="com.example.khalessi.pizzabestellen.MainActivity">
 
@@ -17,6 +18,7 @@
             android:layout_margin="30sp"
             android:gravity="center"
             android:text="Wie hätten Sie gerne Ihre Pizza?"
+            android:textColor="#fff"
             android:textSize="24sp" />
 
         <TableLayout
@@ -33,12 +35,14 @@
                     android:layout_marginRight="@dimen/labelMR"
                     android:gravity="right"
                     android:text="Teig"
+                    android:textColor="#fff"
                     android:textSize="18sp" />
 
                 <Spinner
                     android:id="@+id/teig"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:color="#fff"
                     android:entries="@array/teig" />
 
             </TableRow>

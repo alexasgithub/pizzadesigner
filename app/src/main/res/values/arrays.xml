@@ -20,6 +20,8 @@
         <item>Basilikum</item>
         <item>Zwiebeln</item>
         <item>Paprika</item>
+        <item>Meeresfrüchte</item>
+        <item>Thunfisch</item>
     </string-array>
 
     <string-array name="wurst">
@@ -34,7 +36,7 @@
         <item>kein Käse</item>
         <item>Cheddar</item>
         <item>Hirtenkäse</item>
-        <item>Gauda</item>
+        <item>Gouda</item>
     </string-array>
 
 
