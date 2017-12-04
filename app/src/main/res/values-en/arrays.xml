@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="teig">
+        <item>Wholegrain</item>
+        <item>Thick doe</item>
+        <item>Thin doe</item>
+        <item>Cheesy crust</item>
+        <item>Glutenfree</item>
+
+    </string-array>
+
+    <string-array name="belaege">
+        <item>Ananas</item>
+        <item>Tomatenscheiben</item>
+        <item>Champignons</item>
+        <item>Blattspinat</item>
+        <item>Oliven</item>
+        <item>Artischocken</item>
+        <item>Rucolla</item>
+        <item>Basilikum</item>
+        <item>Zwiebeln</item>
+        <item>Paprika</item>
+        <item>Meeresfrüchte</item>
+        <item>Thunfisch</item>
+    </string-array>
+
+    <string-array name="wurst">
+        <item>Schinken</item>
+        <item>Vegetarisch (keine Wurst)</item>
+        <item>Bacon</item>
+        <item>Salami</item>
+    </string-array>
+
+    <string-array name="kaese">
+        <item>Mozzarella</item>
+        <item>kein Käse</item>
+        <item>Cheddar</item>
+        <item>Hirtenkäse</item>
+        <item>Gouda</item>
+    </string-array>
+
+
+</resources>
