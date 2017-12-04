@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import static com.example.khalessi.pizzabestellen.R.id.ausgabe;
 
-public class MainActivity extends AppCompatActivity implements OnItemSelectedListener {
+public class MainActivity extends AppCompatActivity  {
 
     private final String TAG = "Bestellung";
     private String meinText;
@@ -29,12 +29,16 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
     private String[] kaese;
     private Spinner belaegeAuswahlzwei;
     private String[] belaegeZwei;
-    Button button;
+    private Button button;
+
     public String bestellung, kaeseTag, teigTag, wurstTag, belaegeTag;
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
+
+        // zwischenspeichern des aktuellen zustands
+        // spaeter
         outState.putString("meinText", meinText);
     }
 
@@ -43,25 +47,69 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         teigAuswahl = (Spinner) findViewById(R.id.teig);
-        teigAuswahl.setOnItemSelectedListener(this);
+        teigAuswahl.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view,
+                                       int position, long l) {
+                teigTag = teig[position];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
         //Zugriff auf das Array
         teig = getResources().getStringArray(R.array.teig);
 
-
         belaegeAuswahl = (Spinner) findViewById(R.id.belaege);
-        belaegeAuswahl.setOnItemSelectedListener(this);
+        belaegeAuswahl.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView,
+                                       View view, int position, long l) {
+                belaegeTag = belaege[position];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+
         //Zugriff auf das Array
         belaege = getResources().getStringArray(R.array.belaege);
 
         wurstAuswahl = (Spinner) findViewById(R.id.wurst);
-        wurstAuswahl.setOnItemSelectedListener(this);
+        wurstAuswahl.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view,
+                                       int position, long l) {
+                wurstTag = wurst[position];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
         //Zugriff auf das Array
         wurst = getResources().getStringArray(R.array.wurst);
 
         kaeseAuswahl = (Spinner) findViewById(R.id.kaese);
-        wurstAuswahl.setOnItemSelectedListener(this);
+        kaeseAuswahl.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView,
+                                       View view, int position, long l) {
+                kaeseTag = kaese[position];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
         //Zugriff auf das Array
         kaese = getResources().getStringArray(R.array.kaese);
 
@@ -76,31 +124,6 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
         bestellung = "Ihre Bestellung: " + teigTag + ", " + belaegeTag + ", " + wurstTag + ", " + kaeseTag;
 
         ausgabeText.setText(bestellung);
-
-
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        //String tag = teig.getSelectedItem().toString();
-
-        teigTag = teig[position];
-        belaegeTag = belaege[position];
-        wurstTag = wurst[position];
-        kaeseTag = kaese[position];
-        Log.d(TAG, "Bestellung = " + belaegeTag + wurstTag + kaeseTag);
-        ausgabeText = (TextView) findViewById(ausgabe);
-        // meinText = ausgabe.getText().toString()+" ";
-    /*    String bestellung = "";
-        bestellung = "Ihre Bestellung: " + teigTag + ", " + belaegeTag + ", " + wurstTag + ", " + kaeseTag;
-
-        ausgabeText.setText(bestellung);*/
-
-
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
 }
