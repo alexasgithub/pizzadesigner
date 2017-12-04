@@ -62,6 +62,45 @@
 
 
             </TableRow>
+            <TableRow android:layout_marginBottom="@dimen/rowMB">
+
+                <TextView
+                    android:id="@+id/baelegeLabZwei"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/labelMR"
+                    android:gravity="right"
+                    android:text="2. Belag"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/belaegeZwei"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/belaege" />
+
+
+            </TableRow>
+
+            <TableRow android:layout_marginBottom="@dimen/rowMB">
+
+                <TextView
+                    android:id="@+id/baelegeLabDrei"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/labelMR"
+                    android:gravity="right"
+                    android:text="3. Belag"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/belaegeDrei"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/belaege" />
+
+
+            </TableRow>
 
 
 
