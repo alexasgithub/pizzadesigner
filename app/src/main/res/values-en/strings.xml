@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wie_h_tten_sie_gerne_ihre_pizza">Which ingredients do you like on your pizza?</string>
+    <string name="bestellen">Order</string>
+    <string name="k_se">Cheese</string>
+    <string name="wurst">Sausage</string>
+    <string name="_3_belag">3rd topping</string>
+    <string name="_2_belag">2nd topping</string>
+    <string name="_1_belag">1st topping</string>
+    <string name="teig">Dough</string>
+</resources>

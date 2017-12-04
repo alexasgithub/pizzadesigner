@@ -68,7 +68,7 @@ public class Bestellung {
 
     @Override
     public String toString() {
-        String bestellung = "Ihre Bestellung: "
+        String bestellung = ""
                 + getTeig() + ", "
                 + getBelag1() + ", "
                 + getBelag2() + ", "

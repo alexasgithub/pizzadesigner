@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="30sp"
             android:gravity="center"
-            android:text="Wie hätten Sie gerne Ihre Pizza?"
+            android:text="@string/wie_h_tten_sie_gerne_ihre_pizza"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -36,7 +36,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="@dimen/labelMR"
                     android:gravity="right"
-                    android:text="Teig"
+                    android:text="@string/teig"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -59,7 +59,7 @@
                     android:layout_marginRight="@dimen/labelMR"
                     android:gravity="right"
                     android:textColor="@color/white"
-                    android:text="1. Belag"
+                    android:text="@string/_1_belag"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -79,7 +79,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="@dimen/labelMR"
                     android:gravity="right"
-                    android:text="2. Belag"
+                    android:text="@string/_2_belag"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -101,7 +101,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="@dimen/labelMR"
                     android:gravity="right"
-                    android:text="3. Belag"
+                    android:text="@string/_3_belag"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -124,7 +124,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right"
-                    android:text="Wurst"
+                    android:text="@string/wurst"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -145,7 +145,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="@dimen/labelMR"
                     android:gravity="right"
-                    android:text="Käse"
+                    android:text="@string/k_se"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -168,7 +168,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="20sp"
             android:onClick="onSpeichernClick"
-            android:text="Bestellen">
+            android:text="@string/bestellen">
 
         </Button>
 

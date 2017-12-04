@@ -2,41 +2,43 @@
 <resources>
     <string-array name="teig">
         <item>Wholegrain</item>
-        <item>Thick doe</item>
-        <item>Thin doe</item>
+        <item>Thick dough</item>
+        <item>Thin dough</item>
         <item>Cheesy crust</item>
         <item>Glutenfree</item>
 
     </string-array>
 
     <string-array name="belaege">
-        <item>Ananas</item>
-        <item>Tomatenscheiben</item>
-        <item>Champignons</item>
-        <item>Blattspinat</item>
-        <item>Oliven</item>
-        <item>Artischocken</item>
-        <item>Rucolla</item>
-        <item>Basilikum</item>
-        <item>Zwiebeln</item>
+        <item>Pineapple</item>
+        <item>Tomato</item>
+        <item>Mushrooms</item>
+        <item>Spinach leaves</item>
+        <item>Olives</item>
+        <item>Artichockes</item>
+        <item>Rucola</item>
+        <item>Basil</item>
+        <item>Onions</item>
         <item>Paprika</item>
-        <item>Meeresfrüchte</item>
-        <item>Thunfisch</item>
+        <item>Seafood</item>
+        <item>Tuna</item>
     </string-array>
 
     <string-array name="wurst">
-        <item>Schinken</item>
-        <item>Vegetarisch (keine Wurst)</item>
+        <item>Ham</item>
+        <item>Vegetarian</item>
         <item>Bacon</item>
         <item>Salami</item>
     </string-array>
 
     <string-array name="kaese">
         <item>Mozzarella</item>
-        <item>kein Käse</item>
-        <item>Cheddar</item>
-        <item>Hirtenkäse</item>
-        <item>Gouda</item>
+        <item>No Cheese</item>
+        <item>Cheddar cheese</item>
+        <item>Edam cheese</item>
+        <item>Gouda cheese</item>
+        <item>Parmesan cheese</item>
+        <item>Feta cheese</item>
     </string-array>
 
 

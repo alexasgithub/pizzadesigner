@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Pizzadesigner</string>
+    <string name="wie_h_tten_sie_gerne_ihre_pizza">Wie hätten Sie gerne Ihre Pizza?</string>
+    <string name="bestellen">Bestellen</string>
+    <string name="k_se">Käse</string>
+    <string name="wurst">Wurst</string>
+    <string name="_3_belag">3. Belag</string>
+    <string name="_2_belag">2. Belag</string>
+    <string name="_1_belag">1. Belag</string>
+    <string name="teig">Teig</string>
 </resources>
