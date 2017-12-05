@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -57,12 +58,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         teigAuswahl = (Spinner) findViewById(R.id.teig);
+        ArrayAdapter<CharSequence> teigAdapter =
+                ArrayAdapter.createFromResource(
+                        this,
+                        R.array.teig,
+                        R.layout.layout_simple_spinner_item
+                );
+        teigAdapter.setDropDownViewResource(R.layout.layout_simple_spinner_dropdown_item);
+        teigAuswahl.setAdapter(teigAdapter);
+
         teigAuswahl.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view,
                                        int position, long l) {
                 bestellung.setTeig(teig[position]);
-                setItemStyle(adapterView);
+                //setItemStyle(adapterView);
 
             }
 
