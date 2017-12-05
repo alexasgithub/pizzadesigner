@@ -10,11 +10,11 @@
     </string-array>
 
     <string-array name="belaege">
-        <item>Ananas</item>
         <item>Tomatenscheiben</item>
         <item>Champignons</item>
-        <item>Blattspinat</item>
         <item>Oliven</item>
+        <item>Blattspinat</item>
+        <item>Ananas</item>
         <item>Artischocken</item>
         <item>Rucolla</item>
         <item>Basilikum</item>

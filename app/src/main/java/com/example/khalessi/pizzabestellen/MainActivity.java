@@ -85,6 +85,16 @@ public class MainActivity extends AppCompatActivity {
         teig = getResources().getStringArray(R.array.teig);
 
         belaegeAuswahl = (Spinner) findViewById(R.id.belaege);
+
+        ArrayAdapter<CharSequence> belaegeAdapter =
+                ArrayAdapter.createFromResource(
+                        this,
+                        R.array.belaege,
+                        R.layout.layout_simple_spinner_item
+                );
+        belaegeAdapter.setDropDownViewResource(R.layout.layout_simple_spinner_dropdown_item);
+        belaegeAuswahl.setAdapter(belaegeAdapter);
+
         belaegeAuswahl.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView,
@@ -106,6 +116,18 @@ public class MainActivity extends AppCompatActivity {
 
 
         belaegeAuswahlZwei = (Spinner) findViewById(R.id.belaegeZwei);
+
+
+        ArrayAdapter<CharSequence> belaegeZweiAdapter =
+                ArrayAdapter.createFromResource(
+                        this,
+                        R.array.belaege,
+                        R.layout.layout_simple_spinner_item
+                );
+        belaegeZweiAdapter.setDropDownViewResource(R.layout.layout_simple_spinner_dropdown_item);
+        belaegeAuswahlZwei.setAdapter(belaegeZweiAdapter);
+
+
         belaegeAuswahlZwei.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView,
@@ -125,6 +147,16 @@ public class MainActivity extends AppCompatActivity {
         belaegeZwei = getResources().getStringArray(R.array.belaege);
 
         belaegeAuswahlDrei = (Spinner) findViewById(R.id.belaegeDrei);
+
+        ArrayAdapter<CharSequence> belaegeDreiAdapter =
+                ArrayAdapter.createFromResource(
+                        this,
+                        R.array.teig,
+                        R.layout.layout_simple_spinner_item
+                );
+        belaegeDreiAdapter.setDropDownViewResource(R.layout.layout_simple_spinner_dropdown_item);
+        belaegeAuswahlDrei.setAdapter(belaegeDreiAdapter);
+
         belaegeAuswahlDrei.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView,
@@ -146,6 +178,15 @@ public class MainActivity extends AppCompatActivity {
         belaege = getResources().getStringArray(R.array.belaege);
 
         wurstAuswahl = (Spinner) findViewById(R.id.wurst);
+        ArrayAdapter<CharSequence> wurstAdapter =
+                ArrayAdapter.createFromResource(
+                        this,
+                        R.array.wurst,
+                        R.layout.layout_simple_spinner_item
+                );
+        wurstAdapter.setDropDownViewResource(R.layout.layout_simple_spinner_dropdown_item);
+        wurstAuswahl.setAdapter(wurstAdapter);
+
         wurstAuswahl.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view,
@@ -164,6 +205,16 @@ public class MainActivity extends AppCompatActivity {
         wurst = getResources().getStringArray(R.array.wurst);
 
         kaeseAuswahl = (Spinner) findViewById(R.id.kaese);
+
+        ArrayAdapter<CharSequence> kaeseAdapter =
+                ArrayAdapter.createFromResource(
+                        this,
+                        R.array.kaese,
+                        R.layout.layout_simple_spinner_item
+                );
+        kaeseAdapter.setDropDownViewResource(R.layout.layout_simple_spinner_dropdown_item);
+        kaeseAuswahl.setAdapter(kaeseAdapter);
+
         kaeseAuswahl.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView,
