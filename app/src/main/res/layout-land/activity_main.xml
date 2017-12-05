@@ -129,6 +129,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="right"
                     android:text="Wurst"
+                    android:layout_marginRight="10sp"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold" />

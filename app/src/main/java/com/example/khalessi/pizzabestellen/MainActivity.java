@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView,
                                        View view, int position, long l) {
                 bestellung.setBelag1(belaege[position]);
-                setItemStyle(adapterView);
+             //   setItemStyle(adapterView);
             }
 
             @Override
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView,
                                        View view, int position, long l) {
                 bestellung.setBelag2(belaege[position]);
-                setItemStyle(adapterView);
+               // setItemStyle(adapterView);
             }
 
             @Override
@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView,
                                        View view, int position, long l) {
                 bestellung.setBelag3(belaege[position]);
-                setItemStyle(adapterView);
+              //  setItemStyle(adapterView);
 
 
             }
@@ -192,7 +192,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view,
                                        int position, long l) {
                 bestellung.setWurst(wurst[position]);
-                setItemStyle(adapterView);
+               // setItemStyle(adapterView);
             }
 
             @Override
@@ -220,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView,
                                        View view, int position, long l) {
                 bestellung.setKaese(kaese[position]);
-                setItemStyle(adapterView);
+               // setItemStyle(adapterView);
             }
 
             @Override
