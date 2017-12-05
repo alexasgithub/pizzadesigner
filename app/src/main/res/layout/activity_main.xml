@@ -123,6 +123,7 @@
                     android:id="@+id/wurstLab"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/labelMR"
                     android:gravity="right"
                     android:text="@string/wurst"
                     android:textColor="@color/white"
