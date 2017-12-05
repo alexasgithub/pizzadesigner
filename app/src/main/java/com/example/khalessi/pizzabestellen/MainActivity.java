@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<CharSequence> belaegeDreiAdapter =
                 ArrayAdapter.createFromResource(
                         this,
-                        R.array.teig,
+                        R.array.belaege,
                         R.layout.layout_simple_spinner_item
                 );
         belaegeDreiAdapter.setDropDownViewResource(R.layout.layout_simple_spinner_dropdown_item);
@@ -205,7 +205,6 @@ public class MainActivity extends AppCompatActivity {
         wurst = getResources().getStringArray(R.array.wurst);
 
         kaeseAuswahl = (Spinner) findViewById(R.id.kaese);
-
         ArrayAdapter<CharSequence> kaeseAdapter =
                 ArrayAdapter.createFromResource(
                         this,
