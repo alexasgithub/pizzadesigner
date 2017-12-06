@@ -8,4 +8,5 @@
     <string name="_2_belag">2nd topping</string>
     <string name="_1_belag">1st topping</string>
     <string name="teig">Dough</string>
+    <string name="app_name">Pizza designer</string>
 </resources>

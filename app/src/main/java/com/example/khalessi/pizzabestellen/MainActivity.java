@@ -205,7 +205,6 @@ public class MainActivity extends AppCompatActivity {
         wurst = getResources().getStringArray(R.array.wurst);
 
         kaeseAuswahl = (Spinner) findViewById(R.id.kaese);
-
         ArrayAdapter<CharSequence> kaeseAdapter =
                 ArrayAdapter.createFromResource(
                         this,
