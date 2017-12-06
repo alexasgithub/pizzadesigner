@@ -31,7 +31,7 @@
             <TableRow android:layout_marginBottom="@dimen/rowMB">
 
                 <TextView
-                    android:id="@+id/nameLab"
+                    android:id="@+id/teigLab"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="@dimen/labelMR"
