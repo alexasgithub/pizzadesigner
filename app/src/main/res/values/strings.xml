@@ -9,4 +9,7 @@
     <string name="_1_belag">1. Belag</string>
     <string name="teig">Teig</string>
     <string name="zur_ck_zu_bestellung">Zurück zu Bestellung</string>
+    <string name="best_ttigen">Bestätigen</string>
+    <string name="ihre_bestellung_war_nicht_erfolgreich">Ihre Bestellung war nicht erfolgreich</string>
+    <string name="ihre_bestellung">Ihre Bestellung</string>
 </resources>

@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         // zwischenspeichern des aktuellen zustands
         // spaeter
-        //outState.putString("meinText", meinText);
+        outState.putString("meinText", best.toString());
     }
 
     @Override
@@ -230,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
         kaese = getResources().getStringArray(R.array.kaese);
 
         if (savedInstanceState != null) {
-            // meinText = savedInstanceState.getString(kaese.getText().toString());
+           //  meinText = bestellung.toString());
         }
         best = bestellung.toString();
 
@@ -264,21 +264,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Startet 2. Activity der App und versendet Intents
      *
-     * @param view Die auflösende View
      */
-    public void onStartSecondClick(View view) {
-
-
-        Intent it = new Intent(this, SecondActivity.class);
-
-        //Auftrag  (Intent) erstellen
-        //  Intent it = new Intent();
-        // it.setClass(this, SecondActivity.class);
-
-        it.putExtra(KEY_BOTSCHAFT, "Bestelltext: ");
-        //neue Activity
-        startActivityForResult(it, REQ_CODE);
-    }
 
 
     private void startSecondIntent() {
@@ -286,9 +272,9 @@ public class MainActivity extends AppCompatActivity {
 
         //Auftrag  (Intent) erstellen
         //  Intent it = new Intent();
-        // it.setClass(this, SecondActivity.class);
+        // it.setClass(this, ThirdActivity.class);
 
-        it.putExtra(MainActivity.KEY_BOTSCHAFT, "Bestelltext: ");
+        it.putExtra(MainActivity.KEY_BOTSCHAFT, getString(R.string.ihre_bestellung)+": \n\n"+bestellung.toString());
         //neue Activity
         startActivityForResult(it, REQ_CODE);
     }
@@ -305,12 +291,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        // super.onActivityResult(requestCode, resultCode, data);
+        super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == REQ_CODE && resultCode == SecondActivity.RESULT_OK) {
+        if (requestCode == REQ_CODE && resultCode == ThirdActivity.RESULT_OK) {
 
             Bundle bnd = data.getExtras();
-            String resultString = bnd.getString(SecondActivity.SEC_BOTSCHAFT);
+            String resultString = bnd.getString(ThirdActivity.SEC_BOTSCHAFT);
 
 
             TextView tv = (TextView) findViewById(R.id.ausgabe);
