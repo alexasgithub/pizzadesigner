@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView,
                                        View view, int position, long l) {
                 bestellung.setBelag1(belaege[position]);
-             //   setItemStyle(adapterView);
+                //   setItemStyle(adapterView);
             }
 
             @Override
@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView,
                                        View view, int position, long l) {
                 bestellung.setBelag2(belaege[position]);
-               // setItemStyle(adapterView);
+                // setItemStyle(adapterView);
             }
 
             @Override
@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView,
                                        View view, int position, long l) {
                 bestellung.setBelag3(belaege[position]);
-              //  setItemStyle(adapterView);
+                //  setItemStyle(adapterView);
 
 
             }
@@ -191,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view,
                                        int position, long l) {
                 bestellung.setWurst(wurst[position]);
-               // setItemStyle(adapterView);
+                // setItemStyle(adapterView);
             }
 
             @Override
@@ -218,7 +218,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView,
                                        View view, int position, long l) {
                 bestellung.setKaese(kaese[position]);
-               // setItemStyle(adapterView);
+                // setItemStyle(adapterView);
             }
 
             @Override
@@ -234,7 +234,16 @@ public class MainActivity extends AppCompatActivity {
         }
         best = bestellung.toString();
 
+
+        button = (Button)findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startSecondIntent();
+            }
+        });
     }
+
 
     private void setItemStyle(AdapterView<?> adapterView) {
         if (adapterView != null) {
@@ -260,17 +269,30 @@ public class MainActivity extends AppCompatActivity {
     public void onStartSecondClick(View view) {
 
 
-
         Intent it = new Intent(this, SecondActivity.class);
 
         //Auftrag  (Intent) erstellen
         //  Intent it = new Intent();
-         // it.setClass(this, SecondActivity.class);
+        // it.setClass(this, SecondActivity.class);
 
         it.putExtra(KEY_BOTSCHAFT, "Bestelltext: ");
         //neue Activity
-       startActivityForResult(it, REQ_CODE);
+        startActivityForResult(it, REQ_CODE);
     }
+
+
+    private void startSecondIntent() {
+        Intent it = new Intent(getApplicationContext(), ThirdActivity.class);
+
+        //Auftrag  (Intent) erstellen
+        //  Intent it = new Intent();
+        // it.setClass(this, SecondActivity.class);
+
+        it.putExtra(KEY_BOTSCHAFT, "Bestelltext: ");
+        //neue Activity
+        startActivityForResult(it, REQ_CODE);
+    }
+
 
 
     /**

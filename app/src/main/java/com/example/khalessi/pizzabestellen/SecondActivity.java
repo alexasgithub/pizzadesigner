@@ -9,10 +9,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity {
-    static final String SEC_BOTSCHAFT = "bestaettigung";
+    public static final String SEC_BOTSCHAFT = "bestaettigung";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +19,7 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
 
         // Intent beschaffen
+        /*
         Intent auftrag = getIntent();
         Bundle extras = auftrag.getExtras();
         String botschaft = extras.getString(MainActivity.KEY_BOTSCHAFT);
@@ -27,7 +27,7 @@ public class SecondActivity extends AppCompatActivity {
         //Daten anzeigen
         TextView tv = (TextView) findViewById(R.id.bestelltext);
         tv.setText(botschaft);
-
+*/
 
     }
 
