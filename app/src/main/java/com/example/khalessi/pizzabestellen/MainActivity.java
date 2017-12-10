@@ -1,5 +1,6 @@
 package com.example.khalessi.pizzabestellen;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
@@ -10,20 +11,17 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import java.util.Arrays;
-
 import static com.example.khalessi.pizzabestellen.R.id.ausgabe;
-import static com.example.khalessi.pizzabestellen.R.id.beginning;
-import static com.example.khalessi.pizzabestellen.R.id.chains;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final String TAG = "Bestellung";
-    private String meinText;
+
+    static final String KEY_BOTSCHAFT = "bestellung";
+    static final int REQ_CODE = 2305;
+
     private TextView ausgabeText;
 
     private Spinner teigAuswahl;
@@ -40,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private Spinner belaegeAuswahlDrei;
     private String[] belaegeDrei;
     private Button button;
+    public String best;
 
     private Bestellung bestellung = new Bestellung();
 
@@ -49,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         // zwischenspeichern des aktuellen zustands
         // spaeter
-        outState.putString("meinText", meinText);
+        //outState.putString("meinText", meinText);
     }
 
     @Override
@@ -233,6 +232,7 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState != null) {
             // meinText = savedInstanceState.getString(kaese.getText().toString());
         }
+        best = bestellung.toString();
 
     }
 
@@ -249,6 +249,52 @@ public class MainActivity extends AppCompatActivity {
     public void onSpeichernClick(View v) {
         ausgabeText = (TextView) findViewById(ausgabe);
         ausgabeText.setText(bestellung.toString());
+    }
+
+
+    /**
+     * Startet 2. Activity der App und versendet Intents
+     *
+     * @param view Die auflösende View
+     */
+    public void onStartSecondClick(View view) {
+
+
+
+        Intent it = new Intent(this, SecondActivity.class);
+
+        //Auftrag  (Intent) erstellen
+        //  Intent it = new Intent();
+         // it.setClass(this, SecondActivity.class);
+
+        it.putExtra(KEY_BOTSCHAFT, "Bestelltext: ");
+        //neue Activity
+       startActivityForResult(it, REQ_CODE);
+    }
+
+
+    /**
+     * Empfängt Nacrichten
+     *
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == REQ_CODE && resultCode == SecondActivity.RESULT_OK) {
+
+            Bundle bnd = data.getExtras();
+            String resultString = bnd.getString(SecondActivity.SEC_BOTSCHAFT);
+
+
+            TextView tv = (TextView) findViewById(R.id.ausgabe);
+            tv.setText(resultString);
+
+        }
     }
 
 }
