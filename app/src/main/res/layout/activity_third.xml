@@ -7,4 +7,13 @@
     android:background="@drawable/background1"
     tools:context="com.example.khalessi.pizzabestellen.ThirdActivity">
 
+    <TextView
+        android:id="@+id/tvThirdViewBestellung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="50sp"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="89dp"
+        tools:layout_editor_absoluteY="122dp" />
 </android.support.constraint.ConstraintLayout>

@@ -288,7 +288,7 @@ public class MainActivity extends AppCompatActivity {
         //  Intent it = new Intent();
         // it.setClass(this, SecondActivity.class);
 
-        it.putExtra(KEY_BOTSCHAFT, "Bestelltext: ");
+        it.putExtra(MainActivity.KEY_BOTSCHAFT, "Bestelltext: ");
         //neue Activity
         startActivityForResult(it, REQ_CODE);
     }

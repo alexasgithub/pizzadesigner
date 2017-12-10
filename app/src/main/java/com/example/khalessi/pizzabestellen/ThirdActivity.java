@@ -17,7 +17,7 @@ public class ThirdActivity extends AppCompatActivity {
         String botschaft = extras.getString(MainActivity.KEY_BOTSCHAFT);
 
         //Daten anzeigen
-        TextView tv = (TextView) findViewById(R.id.bestelltext);
+        TextView tv = (TextView) findViewById(R.id.tvThirdViewBestellung);
         tv.setText(botschaft);
     }
 }

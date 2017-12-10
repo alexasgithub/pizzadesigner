@@ -33,13 +33,13 @@ public class SecondActivity extends AppCompatActivity {
 
     public void onZurueckClick(View view) {
 
-        Intent result = new Intent();
-        result.putExtra(SEC_BOTSCHAFT, "Bestellung erhalten");
+        //Intent result = new Intent();
+        //result.putExtra(SEC_BOTSCHAFT, "Bestellung erhalten");
         // startActivity(result);
-        setResult(Activity.RESULT_OK, result);
+        //setResult(Activity.RESULT_OK, result);
         //  intent.setClass(this, MainActivity.class);
         //startActivity(intent);
 
-        finish();
+        //finish();
     }
 }
