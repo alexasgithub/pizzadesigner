@@ -10,9 +10,9 @@ import android.widget.TextView;
 
 public class ThirdActivity extends AppCompatActivity {
 
-    static final String SEC_BOTSCHAFT = "botschaftBack";
+    public static final String SEC_BOTSCHAFT = "botschaftBack";
     private Button button;
-public int REQ_CODE = 2305;
+    public int REQ_CODE = 2305;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ public int REQ_CODE = 2305;
         TextView tv = (TextView) findViewById(R.id.tvThirdViewBestellung);
         tv.setText(botschaft);
 
-        button = (Button)findViewById(R.id.bestaettigung);
+        button = (Button) findViewById(R.id.bestaettigung);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,9 +44,12 @@ public int REQ_CODE = 2305;
         //  Intent it = new Intent();
         // it.setClass(this, SecondActivity.class);
 
-        it.putExtra(ThirdActivity.SEC_BOTSCHAFT, "Ihre Bestaettigung");
+        it.putExtra(ThirdActivity.SEC_BOTSCHAFT, getString(R.string.order_confirmation_message));
+
         //neue Activity
-      //  startActivityForResult(it, REQ_CODE);
+        //  startActivityForResult(it, REQ_CODE);
+
+        setResult(ThirdActivity.RESULT_OK, it);
 
         finish();
     }

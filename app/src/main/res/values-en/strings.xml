@@ -13,4 +13,5 @@
     <string name="best_ttigen">Confirm</string>
     <string name="ihre_bestellung_war_nicht_erfolgreich">Your order was not successful</string>
     <string name="ihre_bestellung">Your order</string>
+    <string name="order_confirmation_message">Your order is confirmed</string>
 </resources>

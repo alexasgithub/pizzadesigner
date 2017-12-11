@@ -12,4 +12,5 @@
     <string name="best_ttigen">Bestätigen</string>
     <string name="ihre_bestellung_war_nicht_erfolgreich">Ihre Bestellung war nicht erfolgreich</string>
     <string name="ihre_bestellung">Ihre Bestellung</string>
+    <string name="order_confirmation_message">Ihre Bestellung wird bestaetigt</string>
 </resources>
