@@ -175,6 +175,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="20sp"
             android:onClick="onStartSecondClick"
+            android:background="@color/button_background"
+            android:textColor="@color/white"
             android:text="@string/bestellen">
 
         </Button>

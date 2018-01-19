@@ -1,7 +1,7 @@
 package com.example.khalessi.pizzabestellen;
 
 /**
- * Created by milde on 04.12.17.
+ * Created by Alexandra Filbert on 04.12.17.
  */
 
 public class Bestellung {

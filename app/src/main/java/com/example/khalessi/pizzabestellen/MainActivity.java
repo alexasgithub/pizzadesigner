@@ -1,11 +1,8 @@
 package com.example.khalessi.pizzabestellen;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -14,7 +11,9 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import static com.example.khalessi.pizzabestellen.R.id.ausgabe;
+/**
+ * Created by Alexandra Filbert on 04.12.17.
+ */
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,15 +41,25 @@ public class MainActivity extends AppCompatActivity {
 
     private Bestellung bestellung = new Bestellung();
 
+    /**
+     * Einstellungen werden im outState gespeichert.
+     *
+     * @param outState
+     */
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
-        // zwischenspeichern des aktuellen zustands
-        // spaeter
         outState.putString("meinText", best.toString());
     }
 
+    /**
+     * Die jeweiligen Spinner werden initialisiert,
+     * die Auswahl in einem ArrayAdapter zwischengespeichert und
+     * ein Listener angebunden.
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -99,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView,
                                        View view, int position, long l) {
                 bestellung.setBelag1(belaege[position]);
-                //   setItemStyle(adapterView);
+
             }
 
             @Override
@@ -132,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView,
                                        View view, int position, long l) {
                 bestellung.setBelag2(belaege[position]);
-                // setItemStyle(adapterView);
+
             }
 
             @Override
@@ -161,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView,
                                        View view, int position, long l) {
                 bestellung.setBelag3(belaege[position]);
-                //  setItemStyle(adapterView);
+
 
 
             }
@@ -191,7 +200,6 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view,
                                        int position, long l) {
                 bestellung.setWurst(wurst[position]);
-                // setItemStyle(adapterView);
             }
 
             @Override
@@ -244,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
+/*
     private void setItemStyle(AdapterView<?> adapterView) {
         if (adapterView != null) {
             TextView childAt = (TextView) adapterView.getChildAt(0);
@@ -260,19 +268,15 @@ public class MainActivity extends AppCompatActivity {
         ausgabeText.setText(bestellung.toString());
     }
 
-
+*/
     /**
-     * Startet 2. Activity der App und versendet Intents
+     * Startet die nächste Activity der App und versendet Intents
      *
      */
 
 
     private void startSecondIntent() {
-        Intent it = new Intent(getApplicationContext(), ThirdActivity.class);
-
-        //Auftrag  (Intent) erstellen
-        //  Intent it = new Intent();
-        // it.setClass(this, ThirdActivity.class);
+        Intent it = new Intent(getApplicationContext(), SecondActivity.class);
 
         it.putExtra(MainActivity.KEY_BOTSCHAFT, getString(R.string.ihre_bestellung)+": \n\n"+bestellung.toString());
         //neue Activity
@@ -282,7 +286,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Empfängt Nacrichten
+     * Empfängt Nachrichten
      *
      * @param requestCode
      * @param resultCode
@@ -293,10 +297,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == REQ_CODE && resultCode == ThirdActivity.RESULT_OK) {
+        if (requestCode == REQ_CODE && resultCode == SecondActivity.RESULT_OK) {
 
             Bundle bnd = data.getExtras();
-            String resultString = bnd.getString(ThirdActivity.SEC_BOTSCHAFT);
+            String resultString = bnd.getString(SecondActivity.SEC_BOTSCHAFT);
 
 
             TextView tv = (TextView) findViewById(R.id.ausgabe);

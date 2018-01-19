@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background_land"
-    tools:context="com.example.khalessi.pizzabestellen.ThirdActivity">
+    android:background="@drawable/background1"
+    tools:context="com.example.khalessi.pizzabestellen.SecondActivity">
 
     <TextView
         android:id="@+id/tvThirdViewBestellung"
@@ -24,11 +24,10 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="50sp"
         android:layout_marginLeft="50sp"
-
         android:paddingLeft="20sp"
         android:paddingRight="20sp"
         android:textColor="@color/white"
-        android:background="#333"
+        android:background="@color/button_background"
         android:text="@string/best_ttigen"
         />
 </LinearLayout>
